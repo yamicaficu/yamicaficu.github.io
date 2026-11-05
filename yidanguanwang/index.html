@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一耽官网-一耽官网首页入口_耽美阅读平台官网指引</title>
+<meta name="description" content="一耽官网首页入口说明：了解一耽官网的定位与内容板块，掌握官网访问方式、页面导航与常见问题，帮助读者快速找到一耽官网的阅读与信息入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1f4b'/%3E%3Cpath d='M18 18h12a8 8 0 0 1 8 8v20H26a8 8 0 0 1-8-8z' fill='%23f2a0b5'/%3E%3Cpath d='M46 18H34a8 8 0 0 0-8 8v20h12a8 8 0 0 0 8-8z' fill='%23ffd9a0' opacity='.85'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#2b1f4b;
+    --ink-soft:#4a3f6b;
+    --paper:#fbf7f4;
+    --paper2:#f4ecef;
+    --line:#e6dae2;
+    --rose:#c9507a;
+    --rose-soft:#f2a0b5;
+    --amber:#c98a2e;
+    --amber-soft:#ffd9a0;
+    --shadow:0 10px 30px rgba(43,31,75,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink-soft);
+    font-family:"Songti SC","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+    line-height:1.85;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--rose);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  h1,h2,h3{color:var(--ink);line-height:1.35;font-weight:700;margin:0;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+  /* 页头 */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,247,244,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{display:flex;align-items:center;gap:22px;padding:12px 0;}
+  .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--ink);letter-spacing:.5px;}
+  .logo svg{width:34px;height:34px;flex:none;}
+  nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;}
+  nav.main a{
+    color:var(--ink-soft);font-size:15px;padding:8px 12px;border-radius:8px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  nav.main a:hover{background:var(--paper2);color:var(--rose);text-decoration:none;}
+  .head-cta{
+    font-family:"Microsoft YaHei",sans-serif;font-size:14px;
+    background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;white-space:nowrap;
+  }
+  .head-cta:hover{background:var(--rose);text-decoration:none;color:#fff;}
+  /* 首屏 */
+  .hero{
+    padding:60px 0 50px;
+    background:
+      radial-gradient(circle at 88% 12%, rgba(242,160,181,.35), transparent 46%),
+      radial-gradient(circle at 6% 92%, rgba(255,217,160,.4), transparent 44%),
+      linear-gradient(180deg,#fdf9f6,#f7eef1);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center;}
+  .kicker{
+    display:inline-block;font-family:"Microsoft YaHei",sans-serif;font-size:13px;
+    letter-spacing:2px;color:var(--rose);border:1px solid var(--rose-soft);
+    padding:4px 12px;border-radius:999px;margin-bottom:18px;background:#fff;
+  }
+  h1{font-size:clamp(30px,4.4vw,46px);letter-spacing:1px;}
+  .hero p.lead{font-size:17.5px;margin:18px 0 26px;max-width:34em;color:var(--ink-soft);}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;font-family:"Microsoft YaHei",sans-serif;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:999px;font-size:15px;font-weight:600;
+  }
+  .btn-primary{background:var(--rose);color:#fff;box-shadow:0 8px 20px rgba(201,80,122,.28);}
+  .btn-primary:hover{background:#b53f68;text-decoration:none;color:#fff;}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink);background:transparent;}
+  .btn-ghost:hover{background:var(--ink);color:#fff;text-decoration:none;}
+  .btn-disabled{background:#e9e1e6;color:#9a8fa6;cursor:not-allowed;}
+  .hero-figure{
+    background:#fff;border:1px solid var(--line);border-radius:22px;
+    padding:24px;box-shadow:var(--shadow);
+  }
+  .hero-figure svg{width:100%;height:auto;display:block;}
+  .hero-figure .fig-cap{
+    font-family:"Microsoft YaHei",sans-serif;font-size:13px;color:#8d82a0;
+    text-align:center;margin-top:12px;
+  }
+  .hero-stats{
+    display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;
+    font-family:"Microsoft YaHei",sans-serif;
+  }
+  .stat b{display:block;font-size:22px;color:var(--ink);font-family:"Songti SC",serif;}
+  .stat span{font-size:13px;color:#8d82a0;}
+  /* 通用区块 */
+  section{padding:56px 0;}
+  .sec-head{max-width:44em;margin-bottom:30px;}
+  .sec-head h2{font-size:clamp(22px,2.8vw,30px);}
+  .sec-head p{margin:10px 0 0;color:#6b6082;}
+  .alt{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  /* 栏目卡片 */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;
+    box-shadow:0 4px 14px rgba(43,31,75,.04);display:flex;flex-direction:column;
+  }
+  .card .ico{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:var(--paper2);margin-bottom:14px;
+  }
+  .card h3{font-size:18px;margin-bottom:8px;}
+  .card p{margin:0;font-size:15.5px;color:#6b6082;}
+  .card .tag{
+    margin-top:16px;font-family:"Microsoft YaHei",sans-serif;font-size:12.5px;
+    color:var(--amber);letter-spacing:1px;
+  }
+  /* 访问路径 */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s;}
+  .step{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;position:relative;
+  }
+  .step::before{
+    counter-increment:s;content:counter(s,decimal-leading-zero);
+    font-family:"Microsoft YaHei",sans-serif;font-size:13px;font-weight:700;
+    color:#fff;background:var(--rose);border-radius:8px;padding:2px 8px;display:inline-block;margin-bottom:12px;
+  }
+  .step h3{font-size:16.5px;margin-bottom:6px;}
+  .step p{margin:0;font-size:15px;color:#6b6082;}
+  /* 正文双栏 */
+  .two-col{display:grid;grid-template-columns:1.3fr .7fr;gap:38px;align-items:start;}
+  .prose p{margin:0 0 16px;}
+  .prose h3{font-size:19px;margin:26px 0 10px;}
+  .prose ul{margin:0 0 16px;padding-left:1.2em;}
+  .prose li{margin-bottom:7px;}
+  .aside{
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);
+  }
+  .aside h3{font-size:16px;margin-bottom:12px;font-family:"Microsoft YaHei",sans-serif;letter-spacing:1px;}
+  .aside dl{margin:0;font-size:15px;}
+  .aside dt{color:var(--ink);font-weight:700;margin-top:12px;}
+  .aside dd{margin:2px 0 0;color:#6b6082;}
+  /* 问答 */
+  .faq{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+  }
+  details+details{margin-top:0;}
+  summary{
+    cursor:pointer;font-weight:700;color:var(--ink);font-size:16px;list-style:none;
+    display:flex;justify-content:space-between;gap:12px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--rose);font-size:20px;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin:12px 0 0;font-size:15.5px;color:#6b6082;}
+  /* 页尾 */
+  footer.site{
+    background:var(--ink);color:#cbc2dd;padding:44px 0 26px;
+    font-family:"Microsoft YaHei",sans-serif;font-size:14.5px;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+  footer.site h4{color:#fff;font-size:15px;margin:0 0 12px;letter-spacing:1px;}
+  footer.site a{color:#cbc2dd;}
+  footer.site a:hover{color:var(--rose-soft);}
+  footer.site ul{list-style:none;margin:0;padding:0;}
+  footer.site li{margin-bottom:8px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:18px;margin-bottom:12px;}
+  .foot-brand svg{width:30px;height:30px;}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.14);margin-top:32px;padding-top:18px;
+    font-size:13px;color:#9a90b5;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  /* 响应式 */
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-figure{order:-1;}
+    .cards{grid-template-columns:1fr 1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .two-col{grid-template-columns:1fr;}
+    .faq{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    body{font-size:16px;}
+    .head-inner{flex-wrap:wrap;gap:10px;}
+    nav.main{margin-left:0;order:3;width:100%;justify-content:flex-start;overflow-x:auto;}
+    nav.main a{padding:6px 10px;font-size:14px;}
+    .head-cta{margin-left:auto;}
+    section{padding:40px 0;}
+    .hero{padding:38px 0 34px;}
+    .cards{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:18px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="一耽官网 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#2b1f4b"/>
+        <path d="M18 18h12a8 8 0 0 1 8 8v20H26a8 8 0 0 1-8-8z" fill="#f2a0b5"/>
+        <path d="M46 18H34a8 8 0 0 0-8 8v20h12a8 8 0 0 0 8-8z" fill="#ffd9a0" opacity=".85"/>
+      </svg>
+      一耽官网
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#position">平台定位</a>
+      <a href="#sections">内容板块</a>
+      <a href="#access">访问路径</a>
+      <a href="#guide">使用说明</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#access">开始访问</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">阅读平台官网指引</span>
+        <h1>一耽官网</h1>
+        <p class="lead">一耽官网是一个以原创耽美小说阅读为核心的内容平台首页。这里汇总一耽官网的栏目结构、访问方式与使用说明，帮助第一次来访的读者弄清“官网在哪里、能读到什么、怎样开始”，也让老读者快速回到书架与更新列表。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#access">进入访问路径</a>
+          <a class="btn btn-ghost" href="#sections">查看内容板块</a>
+          <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" onclick="return false;">下载</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>6</b><span>核心内容板块</span></div>
+          <div class="stat"><b>4</b><span>步官网访问路径</span></div>
+          <div class="stat"><b>5</b><span>常见问题解答</span></div>
+        </div>
+      </div>
+      <figure class="hero-figure" aria-label="一耽官网主题插画">
+        <svg viewBox="0 0 420 300" role="img" aria-label="书架与阅读中的页面示意插画">
+          <rect x="0" y="0" width="420" height="300" rx="18" fill="#fdf6f2"/>
+          <rect x="26" y="34" width="180" height="232" rx="12" fill="#fff" stroke="#e6dae2"/>
+          <rect x="46" y="56" width="140" height="10" rx="5" fill="#f2a0b5"/>
+          <rect x="46" y="80" width="104" height="8" rx="4" fill="#e6dae2"/>
+          <rect x="46" y="102" width="140" height="34" rx="8" fill="#f4ecef"/>
+          <rect x="46" y="146" width="140" height="34" rx="8" fill="#f4ecef"/>
+          <rect x="46" y="190" width="140" height="34" rx="8" fill="#f4ecef"/>
+          <rect x="56" y="112" width="60" height="6" rx="3" fill="#c9507a"/>
+          <rect x="56" y="156" width="82" height="6" rx="3" fill="#c98a2e"/>
+          <rect x="56" y="200" width="46" height="6" rx="3" fill="#c9507a" opacity=".6"/>
+          <rect x="226" y="52" width="168" height="200" rx="12" fill="#2b1f4b"/>
+          <circle cx="310" cy="108" r="30" fill="#ffd9a0" opacity=".9"/>
+          <path d="M268 168h84M268 186h60M268 204h72" stroke="#cbc2dd" stroke-width="7" stroke-linecap="round"/>
+          <path d="M226 52h168v26H226z" fill="#c9507a" opacity=".9"/>
+          <circle cx="248" cy="65" r="4" fill="#fff"/><circle cx="262" cy="65" r="4" fill="#ffd9a0"/>
+        </svg>
+        <figcaption class="fig-cap">一耽官网 · 阅读与栏目结构示意</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 平台定位 -->
+  <section id="position">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>一耽官网是什么：先弄清平台定位</h2>
+        <p>把一耽官网当作“阅读入口 + 信息说明”来看，会比把它当作单纯的搜索词更有效。以下三条是一耽官网首页承担的主要职责。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9507a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h7a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M20 5h-7a3 3 0 0 0-3 3v11h6a3 3 0 0 0 3-3z"/></svg>
+          </div>
+          <h3>原创阅读入口</h3>
+          <p>一耽官网以连载与完本的原创作品为主体，读者从首页即可进入分类、榜单与书架，不必在多个页面之间反复跳转。</p>
+          <span class="tag">阅读为主</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c98a2e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+          </div>
+          <h3>更新与进度</h3>
+          <p>首页把最近更新、连载状态与章节进度集中呈现，读者打开一耽官网就能判断哪些作品正在更新、哪些已经完结。</p>
+          <span class="tag">追更辅助</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a3f6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v6c0 4-3 6.5-7 8-4-1.5-7-4-7-8V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>访问安全提示</h3>
+          <p>网络上存在大量名称相近的仿冒页面。一耽官网的说明页会提醒读者核对域名与页面结构，避免在陌生站点输入账号信息。</p>
+          <span class="tag">辨识参考</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容板块 -->
+  <section id="sections" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>一耽官网的内容板块怎么读</h2>
+        <p>一耽官网首页通常按“发现—阅读—沉淀”的顺序组织内容。理解这条顺序，比逐块点击更省时间。</p>
+      </div>
+      <div class="two-col">
+        <div class="prose">
+          <h3>发现层：榜单、分类与专题</h3>
+          <p>打开一耽官网，最先看到的多是推荐位与榜单。榜单反映近期阅读热度，分类页则按题材、篇幅与完结状态切分。对于还没有明确目标的读者，建议先在分类页锁定两三个感兴趣的方向，再回到榜单比对，避免被首页推荐反复牵引。</p>
+          <h3>阅读层：详情页与章节页</h3>
+          <p>作品详情页承担“是否值得读”的判断任务：简介、标签、字数、更新状态与目录集中在此。进入章节页后，一耽官网的阅读界面一般提供字号、背景与翻页方式设置，这些设置通常保存在本地，下次访问仍然有效。</p>
+          <h3>沉淀层：书架与阅读记录</h3>
+          <p>书架是长期使用的关键。把正在追的作品加入书架后，一耽官网会在更新时给出提示，读者不必每次重新搜索书名。阅读记录则用于找回中断的章节位置，尤其适合同时追多部连载的读者。</p>
+          <ul>
+            <li>先看更新状态，再决定是否投入时间。</li>
+            <li>标签用于缩小范围，简介用于判断风格。</li>
+            <li>书架分组可按题材或进度自行整理。</li>
+          </ul>
+        </div>
+        <aside class="aside">
+          <h3>板块速览</h3>
+          <dl>
+            <dt>推荐与榜单</dt>
+            <dd>按热度与更新节奏排序，适合快速发现新作。</dd>
+            <dt>分类检索</dt>
+            <dd>按题材、篇幅、完结状态筛选，结果直接可见。</dd>
+            <dt>作品详情</dt>
+            <dd>简介、标签、目录与字数集中展示。</dd>
+            <dt>书架与记录</dt>
+            <dd>收藏追更、续读定位，减少重复查找。</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 访问路径 -->
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>访问一耽官网的四个步骤</h2>
+        <p>官网地址可能因网络环境变化而调整，因此这里给出的是可复用的核对方法，而不是一次性的链接。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>核对名称</h3>
+          <p>确认页面标题与品牌文字为“一耽官网”，与主关键词完全一致，避免进入名称相近的站点。</p>
+        </div>
+        <div class="step">
+          <h3>检查结构</h3>
+          <p>正规首页具备导航、榜单、分类与书架入口；若页面只有弹窗与跳转按钮，应提高警惕。</p>
+        </div>
+        <div class="step">
+          <h3>只读不填</h3>
+          <p>首次访问先浏览公开内容，不要在来源不明的页面输入账号、密码或支付信息。</p>
+        </div>
+        <div class="step">
+          <h3>收藏入口</h3>
+          <p>确认无误后收藏一耽官网入口，后续从收藏进入，减少经由搜索结果的二次跳转。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用说明 -->
+  <section id="guide" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>在一耽官网读得更顺的几个习惯</h2>
+        <p>这些做法不改变平台功能，只调整使用顺序，能明显减少无效点击。</p>
+      </div>
+      <div class="two-col">
+        <div class="prose">
+          <p>第一，把“追更”和“补完”分开处理。正在连载的作品放入书架的一个分组，已完结的作品放入另一个分组。一耽官网的书架支持多分组管理，分开之后，更新提示不会被已完结作品淹没。</p>
+          <p>第二，善用简介末尾的标签。标签往往比简介正文更能说明作品基调，尤其是篇幅较长时，先看标签可以快速排除不合适的类型，节省在一耽官网上的筛选时间。</p>
+          <p>第三，调整阅读设置后再固定下来。字号、行距与背景色一旦确定，尽量保持一致，频繁切换反而增加视觉负担。若在手机与电脑之间切换阅读，可分别设置一次。</p>
+          <p>第四，遇到页面异常先刷新再判断。加载不全、目录缺失多为网络问题，与账号状态无关；多次刷新仍异常时，再检查访问地址是否为正确的一耽官网入口。</p>
+        </div>
+        <aside class="aside">
+          <h3>建议顺序</h3>
+          <dl>
+            <dt>1. 分类收窄</dt>
+            <dd>先定题材与完结状态，再看推荐。</dd>
+            <dt>2. 详情判断</dt>
+            <dd>读简介与标签，确认风格是否合适。</dd>
+            <dt>3. 书架归档</dt>
+            <dd>按追更与补完分组，便于回访。</dd>
+            <dt>4. 设置固定</dt>
+            <dd>字号与背景确定后不再频繁调整。</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>关于一耽官网的常见问题</h2>
+        <p>以下回答只涉及访问方式与页面结构，不涉及任何账号或付费承诺。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>一耽官网首页主要提供什么？</summary>
+          <p>一耽官网首页主要提供作品发现、分类检索、详情查看与书架管理四类入口，核心用途是帮助读者找到想读的作品并持续跟进更新。</p>
+        </details>
+        <details>
+          <summary>搜索到多个同名页面怎么办？</summary>
+          <p>先比对页面标题与品牌文字是否为一耽官网，再看是否有完整的导航与分类结构。仅有跳转按钮、要求填写敏感信息的页面，不应视为一耽官网。</p>
+        </details>
+        <details>
+          <summary>书架里的作品为什么没有更新提示？</summary>
+          <p>常见原因是作品本身暂停更新，或提示功能受浏览器通知权限限制。可先在一耽官网的作品详情页确认更新状态，再检查浏览器设置。</p>
+        </details>
+        <details>
+          <summary>手机上阅读排版拥挤怎么处理？</summary>
+          <p>在一耽官网阅读页调整字号与行距，并把浏览器缩放恢复为默认值。多数拥挤问题来自缩放比例，而不是页面本身。</p>
+        </details>
+        <details>
+          <summary>页面加载缓慢是账号问题吗？</summary>
+          <p>通常不是。加载缓慢多与网络环境有关，可先刷新或更换网络再试。若仅个别栏目异常，也可稍后重新访问一耽官网。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#c9507a"/>
+            <path d="M18 18h12a8 8 0 0 1 8 8v20H26a8 8 0 0 1-8-8z" fill="#fff" opacity=".92"/>
+            <path d="M46 18H34a8 8 0 0 0-8 8v20h12a8 8 0 0 0 8-8z" fill="#ffd9a0"/>
+          </svg>
+          一耽官网
+        </div>
+        <p style="margin:0;max-width:26em;">一耽官网首页指引：说明平台定位、内容板块与访问路径，帮助读者用更少的步骤进入阅读。</p>
+      </div>
+      <div>
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#position">平台定位</a></li>
+          <li><a href="#sections">内容板块</a></li>
+          <li><a href="#access">访问路径</a></li>
+          <li><a href="#guide">使用说明</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>相关说明</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">返回顶部</a></li>
+          <li><a href="#access">核对官网入口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页为一耽官网主题首页说明，内容以访问方式与页面结构为主。</span>
+      <span>一耽官网 · 阅读平台指引</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

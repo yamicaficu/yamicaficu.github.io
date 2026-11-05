@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漫蛙漫画免费阅读-漫画免费在线阅读_漫蛙漫画入口与题材导航</title>
+<meta name="description" content="漫蛙漫画免费阅读主题首页，整理漫蛙漫画免费阅读的入口导航、题材分类与阅读方式说明，帮助读者快速找到玄幻、恋爱、悬疑等漫画内容与在线阅读路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f9d6b'/%3E%3Ccircle cx='24' cy='26' r='6' fill='%23fff'/%3E%3Ccircle cx='42' cy='26' r='6' fill='%23fff'/%3E%3Cpath d='M16 44c6 8 26 8 32 0' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --green:#0f9d6b;
+  --green-dark:#0a7350;
+  --green-soft:#e6f6ef;
+  --ink:#1c2b27;
+  --muted:#5b6b66;
+  --line:#dce8e2;
+  --bg:#f7fbf9;
+  --card:#ffffff;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--green-dark);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,svg{max-width:100%;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,251,249,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);}
+.brand:hover{text-decoration:none;}
+.brand .mark{width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:var(--green);display:grid;place-items:center;}
+.brand .mark svg{width:24px;height:24px;}
+.nav ul{list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap;}
+.nav ul a{
+  display:block;padding:7px 12px;border-radius:999px;font-size:14px;color:var(--muted);
+}
+.nav ul a:hover{background:var(--green-soft);color:var(--green-dark);text-decoration:none;}
+.btn{
+  display:inline-block;padding:10px 20px;border-radius:999px;
+  background:var(--green);color:#fff;font-weight:600;font-size:15px;
+  border:1px solid var(--green);transition:background .2s;
+}
+.btn:hover{background:var(--green-dark);border-color:var(--green-dark);text-decoration:none;color:#fff;}
+.btn.ghost{background:#fff;color:var(--green-dark);}
+.btn.ghost:hover{background:var(--green-soft);color:var(--green-dark);}
+.btn[aria-disabled="true"]{pointer-events:none;opacity:.6;}
+
+/* hero */
+.hero{
+  padding:56px 0 48px;
+  background:
+    radial-gradient(900px 320px at 85% 0%, #d9f2e7 0%, rgba(217,242,231,0) 70%),
+    linear-gradient(180deg,#f7fbf9 0%,#f2faf6 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:center;}
+.eyebrow{
+  display:inline-block;font-size:13px;letter-spacing:.08em;
+  color:var(--green-dark);background:var(--green-soft);
+  padding:4px 12px;border-radius:999px;margin-bottom:16px;font-weight:600;
+}
+h1{font-size:clamp(26px,3.6vw,40px);line-height:1.3;margin:0 0 16px;font-weight:800;letter-spacing:-.01em;}
+.hero p.lead{font-size:16px;color:var(--muted);margin:0 0 24px;max-width:52ch;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.hero-note{font-size:13px;color:var(--muted);margin-top:14px;}
+.hero-art{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:18px;box-shadow:0 18px 40px -28px rgba(15,157,107,.5);
+}
+.hero-art svg{display:block;width:100%;height:auto;}
+
+/* sections */
+section{padding:52px 0;}
+section + section{border-top:1px solid var(--line);}
+.sec-head{margin-bottom:26px;max-width:62ch;}
+.sec-head h2{font-size:clamp(20px,2.4vw,26px);margin:0 0 8px;font-weight:750;}
+.sec-head p{margin:0;color:var(--muted);font-size:15px;}
+
+/* topic cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .2s, box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 32px -24px rgba(10,115,80,.6);}
+.card .ico{width:44px;height:44px;border-radius:12px;background:var(--green-soft);display:grid;place-items:center;}
+.card .ico svg{width:24px;height:24px;}
+.card h3{font-size:17px;margin:0;font-weight:700;}
+.card p{margin:0;font-size:14.5px;color:var(--muted);}
+.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px;}
+.tag{font-size:12px;color:var(--green-dark);background:var(--green-soft);padding:2px 9px;border-radius:999px;}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;position:relative;
+}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  font-size:13px;font-weight:700;color:var(--green);
+  letter-spacing:.1em;display:block;margin-bottom:8px;
+}
+.step h3{margin:0 0 6px;font-size:16.5px;}
+.step p{margin:0;font-size:14.5px;color:var(--muted);}
+
+/* reading notes */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.panel h3{margin:0 0 12px;font-size:17px;}
+.panel ul{margin:0;padding-left:18px;color:var(--muted);font-size:14.5px;}
+.panel li{margin-bottom:8px;}
+.panel li strong{color:var(--ink);font-weight:650;}
+
+/* search demo */
+.searchbar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;
+}
+.searchbar input{
+  flex:1 1 240px;min-width:0;padding:11px 16px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;font-size:15px;color:var(--ink);
+  font-family:inherit;
+}
+.searchbar input:focus{outline:2px solid var(--green-soft);border-color:var(--green);}
+.searchbar button{
+  padding:11px 22px;border-radius:999px;border:1px solid var(--green);
+  background:var(--green);color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;
+}
+.searchbar button:hover{background:var(--green-dark);}
+.list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.list li{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px;font-size:14.5px;display:flex;justify-content:space-between;gap:10px;
+}
+.list li span.genre{color:var(--green-dark);font-size:12.5px;white-space:nowrap;}
+.empty{font-size:14.5px;color:var(--muted);padding:10px 2px;}
+
+/* faq */
+.faq{display:grid;gap:12px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;
+}
+details summary{cursor:pointer;font-weight:650;font-size:15.5px;list-style:none;}
+details summary::-webkit-details-marker{display:none;}
+details summary::after{content:"+";float:right;color:var(--green);font-weight:700;}
+details[open] summary::after{content:"–";}
+details p{margin:10px 0 0;font-size:14.5px;color:var(--muted);}
+
+/* footer */
+footer.site{
+  background:#0e2a21;color:#cfe6dc;padding:38px 0 26px;margin-top:0;
+}
+footer.site .fgrid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+footer.site .fbrand{display:flex;align-items:center;gap:10px;font-weight:700;color:#fff;font-size:16px;}
+footer.site .fbrand .mark{width:32px;height:32px;border-radius:9px;background:var(--green);display:grid;place-items:center;}
+footer.site .fbrand .mark svg{width:20px;height:20px;}
+footer.site p{margin:8px 0 0;font-size:13.5px;color:#9fc4b6;max-width:46ch;}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;}
+footer.site nav a{color:#cfe6dc;}
+footer.site nav a:hover{color:#fff;}
+footer .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:26px;padding-top:16px;font-size:12.5px;color:#84a99b;}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-art{order:-1;}
+  .cards,.steps{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;}
+}
+@media (max-width:620px){
+  .nav{gap:10px;}
+  .nav ul{order:3;width:100%;justify-content:flex-start;}
+  .hero{padding:34px 0 36px;}
+  section{padding:38px 0;}
+  .cards,.steps,.list{grid-template-columns:1fr;}
+  .card{padding:18px;}
+  footer.site .fgrid{flex-direction:column;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="漫蛙漫画免费阅读 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img"><circle cx="24" cy="25" r="6" fill="#fff"/><circle cx="42" cy="25" r="6" fill="#fff"/><path d="M16 42c6 9 26 9 32 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span>
+      漫蛙漫画免费阅读
+    </a>
+    <ul>
+      <li><a href="#topics">题材分区</a></li>
+      <li><a href="#howto">阅读方式</a></li>
+      <li><a href="#browse">找漫画</a></li>
+      <li><a href="#faq">常见问题</a></li>
+    </ul>
+    <a class="btn" href="#browse">开始阅读</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 在线阅读导航</span>
+        <h1>漫蛙漫画免费阅读</h1>
+        <p class="lead">这里把漫蛙漫画免费阅读的入口、题材分区和阅读方式整理在一页里。想看玄幻、恋爱还是悬疑，先按分区挑方向，再进入对应漫画页面连续追读。</p>
+        <div class="hero-actions">
+          <a class="btn" href="#browse">按题材找漫画</a>
+          <a class="btn ghost" href="#howto">了解阅读方式</a>
+        </div>
+        <p class="hero-note">页面内容为阅读导航与说明，具体作品与更新情况以站内页面为准。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 240" role="img">
+          <rect x="0" y="0" width="320" height="240" rx="16" fill="#f2faf6"/>
+          <rect x="26" y="26" width="120" height="150" rx="10" fill="#ffffff" stroke="#dce8e2"/>
+          <rect x="40" y="42" width="92" height="62" rx="6" fill="#d9f2e7"/>
+          <circle cx="66" cy="66" r="7" fill="#0f9d6b"/>
+          <circle cx="106" cy="66" r="7" fill="#0f9d6b"/>
+          <path d="M62 84c10 8 38 8 48 0" stroke="#0f9d6b" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <rect x="40" y="116" width="92" height="6" rx="3" fill="#e6f6ef"/>
+          <rect x="40" y="132" width="66" height="6" rx="3" fill="#e6f6ef"/>
+          <rect x="40" y="148" width="78" height="6" rx="3" fill="#e6f6ef"/>
+          <rect x="160" y="46" width="134" height="12" rx="6" fill="#0f9d6b" opacity=".85"/>
+          <rect x="160" y="70" width="104" height="10" rx="5" fill="#bfe6d6"/>
+          <rect x="160" y="90" width="120" height="10" rx="5" fill="#bfe6d6"/>
+          <rect x="160" y="118" width="60" height="22" rx="11" fill="#0f9d6b"/>
+          <rect x="230" y="118" width="64" height="22" rx="11" fill="#e6f6ef"/>
+          <rect x="160" y="158" width="134" height="34" rx="10" fill="#ffffff" stroke="#dce8e2"/>
+          <rect x="172" y="170" width="60" height="10" rx="5" fill="#e6f6ef"/>
+          <rect x="244" y="170" width="38" height="10" rx="5" fill="#e6f6ef"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>从哪里开始：三类常见阅读方向</h2>
+        <p>漫蛙漫画免费阅读的内容跨度较大，先确定自己偏好的叙事节奏，比盲目翻页更省时间。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f9d6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 10l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1.5z"/></svg>
+          </span>
+          <h3>玄幻与热血</h3>
+          <p>重视世界设定和成长线，适合一次读多话。看之前先确认作品简介里的主线目标，能更快进入剧情。</p>
+          <div class="tags"><span class="tag">升级流</span><span class="tag">长篇连载</span></div>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f9d6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.5-7 9-7 9z"/></svg>
+          </span>
+          <h3>恋爱与日常</h3>
+          <p>节奏轻、单话信息量小，适合碎片时间。建议从短篇合集入手，再决定是否追主线连载。</p>
+          <div class="tags"><span class="tag">校园</span><span class="tag">治愈</span></div>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f9d6b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></svg>
+          </span>
+          <h3>悬疑与推理</h3>
+          <p>线索前后呼应，断读容易漏细节。读时留意分镜里的小字与背景信息，复盘会更顺畅。</p>
+          <div class="tags"><span class="tag">单元案件</span><span class="tag">反转</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>漫蛙漫画免费阅读的三步阅读流程</h2>
+        <p>把一次阅读拆成选、读、续三个动作，能减少在列表里来回找的时间。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>先选分区</h3>
+          <p>按题材或更新状态筛选，先锁定两到三部作品，避免同时开太多坑而记混剧情。</p>
+        </div>
+        <div class="step">
+          <h3>再读简介</h3>
+          <p>简介和标签决定作品基调，注意作者署名与连载状态，判断是否值得投入长时间追读。</p>
+        </div>
+        <div class="step">
+          <h3>最后收藏</h3>
+          <p>把在追的作品加入收藏，之后从收藏列表进入，能稳定接上上次阅读的话数。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="browse">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>按关键词找漫画</h2>
+        <p>输入题材、风格或关键词，页面会即时筛选下方条目，帮助你更快定位漫蛙漫画免费阅读中的作品方向。</p>
+      </div>
+      <form class="searchbar" role="search" onsubmit="return false;">
+        <input id="q" type="search" placeholder="例如：玄幻、恋爱、悬疑、校园" aria-label="搜索漫画题材">
+        <button type="button" id="clear">清空筛选</button>
+      </form>
+      <ul class="list" id="titles">
+        <li data-k="玄幻 热血 升级流 长篇"><span>星海炼途</span><span class="genre">玄幻</span></li>
+        <li data-k="恋爱 校园 日常 治愈"><span>课间的三分钟</span><span class="genre">恋爱</span></li>
+        <li data-k="悬疑 推理 反转 单元案件"><span>第七号证词</span><span class="genre">悬疑</span></li>
+        <li data-k="玄幻 东方 世界设定"><span>山海卷宗录</span><span class="genre">玄幻</span></li>
+        <li data-k="恋爱 都市 治愈"><span>晚风经过书店</span><span class="genre">恋爱</span></li>
+        <li data-k="悬疑 都市 反转"><span>午夜来电记录</span><span class="genre">悬疑</span></li>
+      </ul>
+      <p class="empty" id="empty" hidden>没有匹配的条目，试试“玄幻”“恋爱”“悬疑”这类关键词。</p>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>读之前值得留意的几件事</h2>
+        <p>这些说明与漫蛙漫画免费阅读的实际使用相关，能帮你减少阅读中断。</p>
+      </div>
+      <div class="split">
+        <div class="panel">
+          <h3>关于内容与更新</h3>
+          <ul>
+            <li><strong>连载状态：</strong>长篇作品更新节奏不固定，追更前先看最近更新的话数。</li>
+            <li><strong>章节顺序：</strong>部分作品有番外或前传，按站内章节编号阅读最稳妥。</li>
+            <li><strong>题材标签：</strong>标签是筛选的主要依据，但同一标签下风格差异仍然明显。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>关于阅读体验</h3>
+          <ul>
+            <li><strong>连续阅读：</strong>收藏后在固定入口进入，避免每次重新搜索。</li>
+            <li><strong>设备切换：</strong>手机适合短时阅读，平板更适合看双栏分镜。</li>
+            <li><strong>缓存与流量：</strong>移动网络下建议先看页数较少的短篇试读。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>围绕漫蛙漫画免费阅读的使用疑问，集中回答几项高频问题。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>漫蛙漫画免费阅读需要注册吗？</summary>
+          <p>阅读入口与账号要求以站内实际页面为准。收藏、记录进度等功能通常与账号相关，建议按站内提示操作。</p>
+        </details>
+        <details>
+          <summary>为什么有些漫画只显示部分章节？</summary>
+          <p>章节可见范围由作品页面自身的状态决定，可能涉及连载进度或内容调整。遇到不完整的作品，可先阅读简介与更新记录再判断。</p>
+        </details>
+        <details>
+          <summary>怎样更快找到想看的题材？</summary>
+          <p>先在上方搜索框输入题材词筛选，再结合标签与简介对比。玄幻、恋爱、悬疑三类是常见起点，适合初次使用漫蛙漫画免费阅读时建立阅读方向。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="24" cy="25" r="6" fill="#fff"/><circle cx="42" cy="25" r="6" fill="#fff"/><path d="M16 42c6 9 26 9 32 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+          </span>
+          漫蛙漫画免费阅读
+        </div>
+        <p>漫蛙漫画免费阅读主题导航页，整理题材分区、阅读流程与找漫画入口，帮助读者按自己的节奏选择作品。</p>
+      </div>
+      <nav aria-label="页尾导航">
+        <a href="#topics">题材分区</a>
+        <a href="#howto">阅读方式</a>
+        <a href="#browse">找漫画</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+    <div class="copy">本页为阅读导航与说明页面，作品内容、更新与可用功能以站内实际页面为准。</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q=document.getElementById('q');
+  var items=[].slice.call(document.querySelectorAll('#titles li'));
+  var empty=document.getElementById('empty');
+  function filter(){
+    var v=(q.value||'').trim().toLowerCase();
+    var shown=0;
+    items.forEach(function(li){
+      var hit=!v||li.getAttribute('data-k').toLowerCase().indexOf(v)>-1||li.textContent.toLowerCase().indexOf(v)>-1;
+      li.style.display=hit?'':'none';
+      if(hit)shown++;
+    });
+    empty.hidden=shown>0;
+  }
+  q.addEventListener('input',filter);
+  document.getElementById('clear').addEventListener('click',function(){q.value='';filter();q.focus();});
+})();
+</script>
+</body>
+</html>
